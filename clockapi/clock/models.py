@@ -8,6 +8,7 @@ class Clock(models.Model):
     updated_on = models.DateTimeField(auto_now = True)
     name = models.CharField(max_length=100)
     is_selected = models.BooleanField(default = False)
+    is_deleted = models.BooleanField(db_column = 'is_deleted', default = False)
    
     @transaction.atomic
     def save(self, *args, **kwargs):

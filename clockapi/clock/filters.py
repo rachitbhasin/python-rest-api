@@ -15,13 +15,13 @@ class OwnerFilterBackend(filters.BaseFilterBackend):
 
 class DeletedFilterBackend(filters.BaseFilterBackend):
     """
-    Filter that user view only not deleted objects
+    Filter that only objects not deleted are visible
     """
     def filter_queryset(self, request, queryset, view):
         """
         :param request: HTTP Request
         :param queryset: View QuerySet
         :param view: View Instance
-        :return: QuerySet filter by the user request as the owner
+        :return: QuerySet filter by the objects not deleted
         """
         return queryset.filter(is_deleted=False)

@@ -10,4 +10,4 @@ oauthlib==2.0.6
 pytz==2017.3
 requests==2.18.4
 rest-condition==1.0.3
-urllib3==1.22
+urllib3==1.26.5
